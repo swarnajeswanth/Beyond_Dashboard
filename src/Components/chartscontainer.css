@@ -1,0 +1,30 @@
+.charts-container {
+  padding: 0.2rem 0.5rem;
+  width: 40%;
+}
+.charts-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 60px;
+  font-size: 17px;
+  font-weight: bolder;
+}
+.charts-title > span {
+  padding: 0.5rem 1rem;
+}
+.charts-filter-container {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.charts-filter-container > p,
+.charts-filter-container > p > span:last-child {
+  display: flex;
+}
+.charts-filter-container > p > span:first-child,
+.charts-filter-container > p > span:last-child {
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}

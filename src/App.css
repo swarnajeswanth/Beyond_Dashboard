@@ -1,0 +1,17 @@
+.AppContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.AppContainer > div:first-child {
+  height: 100%;
+}
+.AppContainer > div:nth-child(2) {
+  height: 100%;
+}
+.AppContainer > div:nth-child(3) {
+  width: 60%;
+  height: 100%;
+}
