@@ -1,6 +1,7 @@
 .charts-container {
   padding: 0.2rem 0.5rem;
   width: 40%;
+  position: relative;
 }
 .charts-title {
   display: flex;
@@ -27,4 +28,21 @@
   font-size: 13px;
   letter-spacing: 1px;
   font-weight: 600;
+}
+
+.inbox-icons {
+  display: flex;
+  position: absolute;
+  bottom: 5%;
+  width: 100%;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 20px;
+  height: 20px;
+}
+.inbox-icons > * {
+  padding: 0.2rem;
+}
+.inbox-icons > *:hover {
+  font-size: 25px;
 }

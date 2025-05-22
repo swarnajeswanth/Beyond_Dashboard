@@ -2,6 +2,8 @@ import React from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import ChartCard from "./ChartCard";
 import "./chartscontainer.css";
+import { IoReorderThreeOutline } from "react-icons/io5";
+import { BsLayoutSidebarInset } from "react-icons/bs";
 const ChartsContainer = () => {
   return (
     <div className="charts-container">
@@ -29,6 +31,10 @@ const ChartsContainer = () => {
           <ChartCard src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStIIalwchC2BCuVl7HUArREAIrzk1cIegU3w&s" />
           <ChartCard />
         </div>
+      </div>
+      <div className="inbox-icons">
+        <BsLayoutSidebarInset />
+        <IoReorderThreeOutline />
       </div>
     </div>
   );
