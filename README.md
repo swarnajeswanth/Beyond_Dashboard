@@ -3,6 +3,7 @@
 **Beyond Dashboard** is a sleek and modular analytics dashboard built using React. It features interactive charts, AI insights containers, and a responsive UI—ideal for monitoring data metrics and visual analytics in real-time.
 
 ## 🧩 Features
+   LIVE URL :https://beyond-dashboard.netlify.app/
 
 - 📊 **Charts Display** – Modular `ChartCard` and `ChartsContainer` components to visualize data.
 - 🤖 **AI Insight Panels** – `AiContainer` provides a space for smart insights or predictions.
