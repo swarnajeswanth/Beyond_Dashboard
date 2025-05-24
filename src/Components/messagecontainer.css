@@ -1,7 +1,8 @@
 .messages-container {
-  position: relative;
   display: flex;
   flex-direction: column;
+
+  overflow: hidden;
 }
 .message-header {
   min-height: 61px;

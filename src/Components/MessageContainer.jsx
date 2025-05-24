@@ -17,10 +17,17 @@ import {
 const MessageContainer = ({ chatSelected, setChatSelected }) => {
   const messageHeaderRef = useRef(null);
   const [loading, setLoading] = useState(true);
+  const handleCloseChat = () => {
+    gsap.to(".message-chat-container", {
+      y: 100,
+      opacity: 0,
+      duration: 0.5,
+      onComplete: () => setChatSelected({}),
+    });
+  };
   useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000);
+    setLoading(true);
+
     // gsap.fromTo(
     //   messageHeaderRef.current,
     //   { opacity: 0, y: 20 },
@@ -54,8 +61,11 @@ const MessageContainer = ({ chatSelected, setChatSelected }) => {
         opacity: 1,
       }
     );
-  });
-  console.log(chatSelected);
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, [chatSelected]);
+
   return (
     <div className="messages-container">
       {Object.keys(chatSelected).length === 0 ? (
@@ -103,9 +113,12 @@ const MessageContainer = ({ chatSelected, setChatSelected }) => {
           <div className="messages">
             {loading ? (
               <>
-                <LMessageSkeleton />
-
-                <RMessageSkeleton />
+                <div style={{ position: "relative" }}>
+                  <LMessageSkeleton />
+                </div>
+                <div style={{ position: "relative" }}>
+                  <RMessageSkeleton />
+                </div>
               </>
             ) : (
               <>

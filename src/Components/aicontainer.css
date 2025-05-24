@@ -13,8 +13,18 @@
   height: 8%;
 }
 .ai-main > div:last-child {
-  margin-top: 0.2rem;
-  font-size: 17px;
+  margin-top: 0.1rem;
+
+  padding: 0.2rem;
+}
+.sidebar-icon {
+  color: white;
+  border-radius: 4px;
+  transition: all 0.5s ease;
+}
+.sidebar-icon:hover {
+  background-color: lightgrey;
+  color: black;
 }
 .ai-container-header {
   padding: 0 0.5rem;
@@ -34,7 +44,6 @@
   font-size: 1.4rem;
 }
 .ai-container-content-header > *:first-child {
-  color: black;
   font-size: 4rem;
   padding: 0.5rem;
   border: 1px solid black;
@@ -47,16 +56,37 @@
 .ai-container-content-header > *:last-child {
   font-size: 1rem;
 }
+
+.ai-container-header > div {
+  display: flex;
+  height: 4.3rem;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
 .ai-container-header > div > span {
+  border-radius: 4px;
+  padding: 0.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.5s ease;
 }
+.ai-container-header > div > span:hover {
+  background-color: lightgrey;
+  color: black;
+}
+.ai-active {
+  background-color: lightgrey;
+  color: black;
+}
+
 .ai-container-header > div:last-child > span {
-  margin-top: 0.4rem;
+  margin-top: 0.2rem;
+  padding: 0.6rem 0.2rem;
 }
 .ai-container-header > div > span > svg {
-  margin-right: 0.2rem;
+  margin-right: 0.6rem;
 }
 .ai-icon {
   font-size: 30px;
@@ -136,4 +166,30 @@
   padding: 0.5rem;
   border-radius: 50%;
   border: 1px solid white;
+}
+
+/* Deatail bar */
+.collapsible-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 0;
+  border-top: 1px solid #eee;
+  cursor: pointer;
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+.arrow-icon.open {
+  transform: rotate(180deg);
+}
+
+.collapsible-content {
+  font-size: 13px;
+  color: #444;
+  padding: 8px 0 0 10px;
 }

@@ -5,8 +5,25 @@ import { BiUpArrowAlt } from "react-icons/bi";
 import { GiCash } from "react-icons/gi";
 import "./aicontainer.css";
 import gsap from "gsap";
+import { FaChevronDown } from "react-icons/fa";
 const AiContainer = () => {
+  const [openSections, setOpenSections] = useState({
+    userData: false,
+    conversationAttributes: false,
+    companyDetails: false,
+    salesforce: false,
+    stripe: false,
+    jira: false,
+  });
+
+  const toggleSection = (section) => {
+    setOpenSections((prev) => ({
+      ...prev,
+      [section]: !prev[section],
+    }));
+  };
   const [show, setShow] = useState(true);
+  const [clicked, setClicked] = useState("Ai");
   const aiRef = useRef(null);
   const chimpRef = useRef(null);
   useEffect(() => {
@@ -23,64 +40,140 @@ const AiContainer = () => {
       { scale: 1.2, opacity: 0 },
       { scale: 1, opacity: 1, repeat: -1, duration: 1.5 }
     );
-  });
+  }, [show]);
   return (
     <>
       {show ? (
         <div className={`ai-container ${!show && "none"} `} ref={aiRef}>
           <div className="ai-main">
             <div className="ai-container-header">
-              <div>
-                <span>
+              <div onClick={() => setClicked("Ai")}>
+                <span className={`${clicked === "Ai" && "ai-active "}`}>
                   <FaMailchimp className="ai-icon" style={{ color: "black" }} />{" "}
                   Ai Copilot
                 </span>
-                <div className="active"></div>
+                <div className={`${clicked === "Ai" && "active"}`}></div>
               </div>
-              <div>
-                <span>Details</span>
-                <div className="active"></div>
+              <div onClick={() => setClicked("Detail")}>
+                <span className={`${clicked === "Detail" && "ai-active "}`}>
+                  Details
+                </span>
+                <div className={`${clicked === "Detail" && "active"}`}></div>
               </div>
             </div>
             <div>
               {" "}
               <TbLayoutSidebar
-                style={{ cursor: "pointer" }}
+                className="sidebar-icon"
+                style={{
+                  cursor: "pointer",
+                  fontSize: "1.6rem",
+                }}
                 onClick={() => setShow(false)}
               />
             </div>
           </div>
           <hr />
-          <div className="ai-container-content">
-            <div className="ai-container-content-header">
-              <span className="ai-icon">
-                <FaMailchimp />
-              </span>
-              <span>Hi,i'm Fin Ai Copilot</span>
-              <p>Ask me anything about this conversation</p>
+          {clicked === "Ai" ? (
+            <>
+              {" "}
+              <div className="ai-container-content">
+                <div className="ai-container-content-header">
+                  <span className="ai-icon">
+                    <FaMailchimp />
+                  </span>
+                  <span>Hi,i'm Fin Ai Copilot</span>
+                  <p>Ask me anything about this conversation</p>
+                </div>
+                <div className="suggestions">
+                  <p>
+                    <b>Suggested</b>
+                    <GiCash
+                      style={{
+                        display: "inline-block",
+                        fontSize: "1rem",
+                        margin: "0 0.4rem",
+                      }}
+                    />{" "}
+                    How do i get a refund?
+                  </p>
+                </div>
+              </div>
+              <div className="ai-container-input">
+                <span>
+                  <input type="text" placeholder="Ask a question..." />
+                  <span className="input-icon">
+                    <BiUpArrowAlt />
+                  </span>
+                </span>
+              </div>
+            </>
+          ) : (
+            <div className="sidebar">
+              <div className="section">
+                <div className="label">Assignee</div>
+                <div className="value with-avatar">
+                  <img
+                    src="https://via.placeholder.com/24"
+                    alt="avatar"
+                    className="avatar"
+                  />
+                  Brian Byrne
+                </div>
+                <div className="label">Team</div>
+                <div className="value with-icon">
+                  <span className="icon">👥</span> Unassigned
+                </div>
+              </div>
+
+              <div className="section">
+                <div className="label">Links</div>
+                <div className="link">
+                  <span className="icon">🎫</span> Tracker ticket{" "}
+                  <button>+</button>
+                </div>
+                <div className="link">
+                  <span className="icon">📂</span> Back-office tickets{" "}
+                  <button>+</button>
+                </div>
+                <div className="link">
+                  <span className="icon">↗</span> Side conversations{" "}
+                  <button>+</button>
+                </div>
+              </div>
+
+              {[
+                { key: "userData", label: "USER DATA" },
+                {
+                  key: "conversationAttributes",
+                  label: "CONVERSATION ATTRIBUTES",
+                },
+                { key: "companyDetails", label: "COMPANY DETAILS" },
+                { key: "salesforce", label: "SALESFORCE" },
+                { key: "stripe", label: "STRIPE" },
+                { key: "jira", label: "JIRA FOR TICKETS" },
+              ].map(({ key, label }) => (
+                <div key={key} className="section">
+                  <div
+                    className="collapsible-header"
+                    onClick={() => toggleSection(key)}
+                  >
+                    {label}
+                    <FaChevronDown
+                      className={`arrow-icon ${
+                        openSections[key] ? "open" : ""
+                      }`}
+                    />
+                  </div>
+                  {openSections[key] && (
+                    <div className="collapsible-content">
+                      <p>Content for {label}</p>
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
-            <div className="suggestions">
-              <p>
-                <b>Suggested</b>
-                <GiCash
-                  style={{
-                    display: "inline-block",
-                    fontSize: "1rem",
-                    margin: "0 0.4rem",
-                  }}
-                />{" "}
-                How do i get a refund?
-              </p>
-            </div>
-          </div>
-          <div className="ai-container-input">
-            <span>
-              <input type="text" placeholder="Ask a question..." />
-              <span className="input-icon">
-                <BiUpArrowAlt />
-              </span>
-            </span>
-          </div>
+          )}
         </div>
       ) : (
         <FaMailchimp

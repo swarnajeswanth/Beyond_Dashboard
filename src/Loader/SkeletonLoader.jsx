@@ -92,7 +92,7 @@ export function MessageHeader() {
     });
   }, []);
   return (
-    <div style={{ overflow: "hidden" }}>
+    <div style={{ overflow: "hidden", position: "relative" }}>
       <p
         style={{
           padding: "0.8rem 1rem",
