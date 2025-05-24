@@ -1,12 +1,40 @@
-# React + Vite
+# Beyond Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Beyond Dashboard** is a sleek and modular analytics dashboard built using React. It features interactive charts, AI insights containers, and a responsive UI—ideal for monitoring data metrics and visual analytics in real-time.
 
-Currently, two official plugins are available:
+## 🧩 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 📊 **Charts Display** – Modular `ChartCard` and `ChartsContainer` components to visualize data.
+- 🤖 **AI Insight Panels** – `AiContainer` provides a space for smart insights or predictions.
+- 🎨 **Responsive Layout** – Built with custom CSS to ensure smooth responsiveness across devices.
+- ⚛️ **Modern React Setup** – Utilizes React hooks and functional components with a clean architecture.
 
-## Expanding the ESLint configuration
+## 📁 Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Getting Started
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/swarnajeswanth/Beyond_Dashboard.git
+cd Beyond_Dashboard
+
+Tech Stack
+Frontend: React (Vite)
+
+Styling: CSS Modules
+
+Charts (planned): (You can integrate Chart.js, Recharts, etc.)
+
+✨ Customization
+You can easily extend this dashboard by adding:
+
+API integration for dynamic data
+
+Charting libraries for visual analytics
+
+Dark mode toggle
+
+![image](https://github.com/user-attachments/assets/6f34632f-d9e5-416c-8a57-25a1ebd3a981)
+![image](https://github.com/user-attachments/assets/b0997134-387d-4f48-98cb-c2071e4c6548)
+
