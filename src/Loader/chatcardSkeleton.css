@@ -1,0 +1,70 @@
+.skeleton-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+.skeleton {
+  background-color: #ddd;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* .chart-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+} */
+
+/* .chart-card-profile-picture {
+  width: 50px;
+  height: 50px;
+} */
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* .chart-card-details {
+  flex: 1;
+} */
+
+.line {
+  height: 12px;
+  margin-bottom: 10px;
+}
+
+.name-line {
+  width: 60%;
+  height: 14px;
+}
+
+.message-line {
+  width: 100%;
+}
+
+.message-line.short {
+  width: 80%;
+}
+
+.shimmer {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: fit-content
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
