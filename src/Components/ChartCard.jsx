@@ -1,27 +1,44 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { MdTimelapse } from "react-icons/md";
 import "./ChartCard.css";
-const ChartCard = ({ src }) => {
+import gsap from "gsap";
+const ChartCard = ({ people, setChatSelected }) => {
+  const cardsref = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      ".chart-card ",
+      { opacity: 0, left: -100 },
+      { opacity: 1, duration: 0.5, left: 0, stagger: 0.4 }
+    );
+  });
   return (
-    <div className="chart-card">
+    <div
+      className="chart-card"
+      ref={cardsref}
+      onClick={() => setChatSelected(people)}
+    >
       <div className="chart-card-profile-picture">
         <img
           src={
-            src ||
+            people.profile_img ||
             `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG_8yUlsY5mKz7R29V1vV8wjUpgs_zDsH8RA&s`
           }
         />
       </div>
       <div className="chart-card-details">
         <h4 className="chart-card-UserName">
-          Luis- Github{" "}
-          <span>
-            <MdTimelapse />
-            3min
-          </span>
+          {people.full_name}{" "}
+          {people.last_seen && (
+            <span>
+              <MdTimelapse />
+              3m
+            </span>
+          )}
         </h4>
         <p className="chart-card-message">
-          <span>Hey! I have a Question....</span> <span>45m</span>
+          <span>{people.last_Message.slice(0, 20)}....</span>{" "}
+          <span> {people.recieved_last_message || "45m"} </span>
         </p>
       </div>
     </div>

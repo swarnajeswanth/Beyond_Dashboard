@@ -5,7 +5,6 @@
 }
 .message-header {
   min-height: 61px;
-
   display: flex;
   flex-shrink: 1;
   padding: 0 5px;
@@ -14,7 +13,7 @@
 }
 .message-header > p {
   color: white;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bolder;
 }
 .message-feature-icons {
@@ -51,10 +50,14 @@
   overflow: hidden;
   display: flex;
   min-height: 70%;
+  overflow-y: scroll;
   flex-direction: column;
   gap: 1rem;
 
   padding: 1rem 2rem;
+}
+.messages::-webkit-scrollbar {
+  display: none;
 }
 .rsingle-msg {
   display: flex;
@@ -64,13 +67,13 @@
   max-width: 100%;
 }
 .rsingle-msg > div:first-child {
-  min-width: 3.5rem;
+  min-width: 3rem;
   border-radius: 50%;
   background-color: #d3dcf5;
 }
 .rsingle-msg > div > img {
-  max-width: 3.5rem;
-  max-height: 3.5rem;
+  max-width: 3rem;
+  max-height: 3rem;
 
   border-radius: 50%;
   overflow: hidden;
@@ -79,11 +82,16 @@
   padding: 0.2rem;
   justify-content: center;
 }
+.rmsg {
+  width: 100%;
+}
 .rmsg p {
-  width: 45%;
+  max-width: 60%;
+  width: fit-content;
   padding: 0.5rem 1rem;
   background-color: #d3dcf5;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+
   border-radius: 14px;
 }
 .lsingle-msg {
@@ -96,8 +104,8 @@
 }
 
 .lsingle-msg > div > img {
-  max-width: 3.5rem;
-  max-height: 3.5rem;
+  max-width: 3rem;
+  max-height: 3rem;
   border-radius: 50%;
   overflow: hidden;
   display: flex;
@@ -105,7 +113,7 @@
   justify-content: center;
 }
 .lsingle-msg > div:first-child {
-  min-width: 55%;
+  min-width: 60%;
 }
 .rsingle-msg > div:first-child {
   width: 2.3%;
@@ -114,7 +122,7 @@
   width: 100%;
   padding: 0.5rem 1rem;
   background-color: lightgrey;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   border-radius: 14px;
 }
 .lmsg {
@@ -134,11 +142,13 @@
   justify-content: space-between;
   border-radius: 15px;
   border: 1px solid white;
+  box-shadow: 0 0 3px 1px white;
 }
 .message-chat-header {
   display: flex;
-  color: white;
+  color: black;
   font-weight: bolder;
+  font-size: 1.6rem;
   padding: 0.2rem 0.2rem;
   align-items: center;
   gap: 0.5rem;
@@ -146,8 +156,8 @@
 
 .message-chat-shortcut {
   margin-top: 0.2rem;
-  font-size: 13px;
-  color: white;
+  font-size: 1.2rem;
+  color: black;
 }
 .message-chat-icons {
   display: flex;
@@ -179,12 +189,13 @@
 
 .message-chat-icons > div:last-child > input {
   background-color: transparent;
-  color: white;
+  color: black;
   padding: 0.2rem;
   outline: none;
   height: 30x;
   border: 1px solid rgb(0, 0, 0);
   height: 35px;
+  font-size: 1.2rem;
   border-radius: 7px;
   box-shadow: 0 0 1px 0 black;
 
@@ -198,13 +209,18 @@
 }
 .message-chat-icons > div:last-child > span > button {
   padding: 0.2rem 0.4rem;
+  color: black;
   outline: none;
   border: none;
   background-color: transparent;
+  transition: all 0.5s ease;
 }
-
+.message-chat-icons > div:last-child > span:hover {
+  scale: 1.1;
+}
 .message-chat-icons > div:last-child > span {
-  background-color: lightgrey;
+  background-color: #5abecf;
+
   display: flex;
   align-items: center;
   padding: 0.2rem;

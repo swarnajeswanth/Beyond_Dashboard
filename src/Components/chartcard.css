@@ -3,9 +3,12 @@
   padding: 15px 5px;
   align-items: center;
   border-radius: 14px;
+  position: relative;
+  transition: all 0.5s ease;
 }
 .chart-card:hover {
-  background-color: #e7edf9;
+  background-color: #458a99;
+  /* e7edf9 */
 }
 .chart-card-profile-picture {
   min-width: 2.6rem;

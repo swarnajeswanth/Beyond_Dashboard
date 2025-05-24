@@ -5,6 +5,7 @@
   align-items: center;
   background: linear-gradient(to bottom, #2c3e50, #4ca1af);
   overflow: hidden;
+  position: relative;
 }
 .AppContainer > div:first-child {
   display: flex;
@@ -17,12 +18,14 @@
 .AppContainer > div:nth-child(2) {
   flex-shrink: 2;
   height: 100%;
+  width: 100%;
 }
 .AppContainer > div:nth-child(3) {
-  display: none;
+  /* display: none; */
+  background: linear-gradient(25deg, #4ca1af, #2c3e50);
   flex-shrink: 1;
   min-width: 300px;
-  width: 40%;
+  width: 35%;
   height: 100%;
 }
 

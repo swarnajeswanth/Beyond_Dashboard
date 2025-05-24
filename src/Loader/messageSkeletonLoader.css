@@ -2,7 +2,7 @@
   display: flex;
   align-items: flex-end;
   padding: 12px;
-  background-color: #375f70;
+  background-color: #2f3e4e;
   border-radius: 10px;
   max-width: 700px;
   position: relative;
@@ -27,7 +27,9 @@
   flex-direction: column;
   gap: 8px;
 }
-
+.cbsk-rmessage {
+  background-color: #d3d3d3;
+}
 .cbsk-line {
   height: 10px;
   background-color: #ccc;
@@ -65,4 +67,39 @@
   );
   z-index: 1;
   pointer-events: none;
+}
+
+/* Right-aligned container */
+.cbsk-r-container {
+  display: flex;
+  align-items: flex-end;
+  padding: 12px;
+  background-color: #2f3e4e;
+  border-radius: 10px;
+  min-width: 700px;
+  position: relative;
+  overflow: hidden;
+  justify-content: flex-end;
+  margin-left: auto; /* aligns this entire block to the right */
+}
+
+/* Right avatar */
+.cbsk-r-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: white;
+  flex-shrink: 0;
+  margin-left: 10px;
+}
+
+/* Right message box */
+.cbsk-r-message {
+  flex: 1;
+  padding: 10px 14px;
+  background-color: #d3d3d3;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
