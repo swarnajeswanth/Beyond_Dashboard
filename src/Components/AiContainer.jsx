@@ -114,7 +114,7 @@ const AiContainer = () => {
                 <div className="label">Assignee</div>
                 <div className="value with-avatar">
                   <img
-                    src="https://via.placeholder.com/24"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG_8yUlsY5mKz7R29V1vV8wjUpgs_zDsH8RA&s"
                     alt="avatar"
                     className="avatar"
                   />

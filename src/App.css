@@ -23,7 +23,7 @@
 .AppContainer > div:nth-child(3) {
   /* display: none; */
   background: linear-gradient(25deg, #4ca1af, #2c3e50);
-  flex-shrink: 1;
+  flex-shrink: 2;
   min-width: 300px;
   width: 35%;
   height: 100%;
@@ -33,20 +33,14 @@
    */
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
-  .AppContainer > div:first-child {
-    /* display: none; */
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    margin: 40% 0;
-    display: flex;
-    flex-direction: column;
-    height: 40%;
-    border: 1px solid black;
-    border-radius: 14px;
-    /* background-color: white; */
-    background: linear-gradient(to bottom, #f0f0f0, #d9d9d9);
+  AppContainer > div:first-child::-webkit-scrollbar {
+    display: none;
+  }
+  .AppContainer > div:first-child::-webkit-scrollbar {
+    display: none;
+  }
+  .AppContainer > div:nth-child(1) {
+    flex-basis: 40%;
   }
   .AppContainer > div:nth-child(2) {
     flex-shrink: 1;
@@ -55,7 +49,19 @@
   .AppContainer > div:nth-child(3) {
     display: none;
   }
-  .AppContainer > div:nth-child(4) {
+}
+/* 768px - 1023px */
+@media only screen and (min-width: 769px) and (max-width: 1023px) {
+  .AppContainer > div:first-child {
+    flex-basis: 35%;
+  }
+  .AppContainer > div:nth-child(3) {
     display: none;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  .AppContainer > div:first-child {
+    flex-basis: 30%;
   }
 }

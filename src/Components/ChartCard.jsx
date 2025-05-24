@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { MdTimelapse } from "react-icons/md";
 import "./ChartCard.css";
 import gsap from "gsap";
-const ChartCard = ({ people, setChatSelected }) => {
+const ChartCard = ({ people, isActive, onClick, setChatSelected }) => {
   const cardsref = useRef(null);
 
   useEffect(() => {
@@ -14,9 +14,12 @@ const ChartCard = ({ people, setChatSelected }) => {
   });
   return (
     <div
-      className="chart-card"
+      className={`chart-card ${isActive ? "active" : ""}`}
+      onClick={() => {
+        onClick;
+        setChatSelected(people);
+      }}
       ref={cardsref}
-      onClick={() => setChatSelected(people)}
     >
       <div className="chart-card-profile-picture">
         <img

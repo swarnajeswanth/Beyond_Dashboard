@@ -6,7 +6,7 @@ import { IoReorderThreeOutline } from "react-icons/io5";
 import { BsLayoutSidebarInset } from "react-icons/bs";
 import { ChartCardSkeleton } from "../Loader/SkeletonLoader";
 import gsap from "gsap";
-const ChartsContainer = ({ setChatSelected }) => {
+const ChartsContainer = ({ setChatSelected, kai, setKai }) => {
   const PeoplesData = [
     {
       profile_img: "",
@@ -94,7 +94,9 @@ const ChartsContainer = ({ setChatSelected }) => {
                 return (
                   <ChartCard
                     key={idx}
+                    isActive={kai === idx}
                     people={people}
+                    onClick={() => setKai(idx)}
                     setChatSelected={setChatSelected}
                   />
                 );

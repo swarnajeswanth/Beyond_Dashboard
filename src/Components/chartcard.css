@@ -6,6 +6,9 @@
   position: relative;
   transition: all 0.5s ease;
 }
+.chat-card {
+  background-color: #458a99;
+}
 .chart-card:hover {
   background-color: #458a99;
   /* e7edf9 */
@@ -58,4 +61,9 @@
 }
 .chart-card-UserName > span > svg {
   font-size: 1.2rem;
+}
+
+.chart-card.active {
+  background-color: #458a99;
+  color: white;
 }
