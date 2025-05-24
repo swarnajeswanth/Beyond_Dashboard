@@ -3,20 +3,56 @@
   height: 100vh;
   display: flex;
   align-items: center;
+  background: linear-gradient(to bottom, #2c3e50, #4ca1af);
   overflow: hidden;
 }
 .AppContainer > div:first-child {
-  flex-basis: 250px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 20%;
   flex-shrink: 0;
   height: 100%;
+  color: white;
 }
 .AppContainer > div:nth-child(2) {
   flex-shrink: 2;
   height: 100%;
 }
 .AppContainer > div:nth-child(3) {
+  display: none;
   flex-shrink: 1;
   min-width: 300px;
   width: 40%;
   height: 100%;
+}
+
+/* first child darkmode   background: linear-gradient(to bottom, #232526, #414345);
+   */
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .AppContainer > div:first-child {
+    /* display: none; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    margin: 40% 0;
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+    border: 1px solid black;
+    border-radius: 14px;
+    /* background-color: white; */
+    background: linear-gradient(to bottom, #f0f0f0, #d9d9d9);
+  }
+  .AppContainer > div:nth-child(2) {
+    flex-shrink: 1;
+    width: 100%;
+  }
+  .AppContainer > div:nth-child(3) {
+    display: none;
+  }
+  .AppContainer > div:nth-child(4) {
+    display: none;
+  }
 }

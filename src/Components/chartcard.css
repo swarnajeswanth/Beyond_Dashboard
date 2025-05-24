@@ -8,8 +8,8 @@
   background-color: #e7edf9;
 }
 .chart-card-profile-picture {
-  width: 40px;
-  height: 40px;
+  min-width: 2.6rem;
+  min-height: 2.6rem;
   border-radius: 50%;
   overflow: hidden;
   display: flex;
@@ -17,40 +17,42 @@
   justify-content: center;
 }
 .chart-card-profile-picture > img {
-  width: 40px;
-  height: 40px;
+  max-width: 2.6rem;
+  max-height: 2.6rem;
 }
 .chart-card-details {
-  width: 80%;
+  min-width: 80%;
   margin-left: 10px;
+  font-size: 1.2rem;
 }
 .chart-card-UserName {
-  font-size: 14px;
   font-weight: bold;
   margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.chart-card-UserName > span {
+  color: #000000;
 }
 .chart-card-message {
   display: flex;
   justify-content: space-between;
-  font-size: 11px;
-  color: #888;
+  font-size: 1rem;
+  color: #f4f4f4;
 }
 .chart-card-message > span:last-child {
   font-weight: bold;
-}
-.chart-card-UserName {
-  display: flex;
-  justify-content: space-between;
+  color: #000000;
 }
 .chart-card-UserName > span {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 70%;
+  font-size: 0.8rem;
   padding: 5px;
   border-radius: 14px;
   background-color: #decb90;
 }
 .chart-card-UserName > span > svg {
-  font-size: 17px;
+  font-size: 1.2rem;
 }

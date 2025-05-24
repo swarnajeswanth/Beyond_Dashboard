@@ -4,6 +4,8 @@ import ChartCard from "./ChartCard";
 import "./chartscontainer.css";
 import { IoReorderThreeOutline } from "react-icons/io5";
 import { BsLayoutSidebarInset } from "react-icons/bs";
+import { ChartCardSkeleton } from "../Loader/SkeletonLoader";
+
 const ChartsContainer = () => {
   return (
     <div className="charts-container">
@@ -30,6 +32,7 @@ const ChartsContainer = () => {
           <ChartCard />
           <ChartCard src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStIIalwchC2BCuVl7HUArREAIrzk1cIegU3w&s" />
           <ChartCard />
+          <ChartCardSkeleton />
         </div>
       </div>
       <div className="inbox-icons">

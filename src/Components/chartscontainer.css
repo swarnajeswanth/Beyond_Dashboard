@@ -2,6 +2,10 @@
   padding: 0.2rem 0.5rem;
   width: 40%;
   position: relative;
+  box-shadow: 0 0 5px 0.2px black;
+  height: 98%;
+  border-radius: 14px;
+  border: 1px solid black;
 }
 .charts-title {
   display: flex;

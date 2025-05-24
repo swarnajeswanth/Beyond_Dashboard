@@ -1,0 +1,68 @@
+.cbsk-container {
+  display: flex;
+  align-items: flex-end;
+  padding: 12px;
+  background-color: #375f70;
+  border-radius: 10px;
+  max-width: 700px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cbsk-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: white;
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+.cbsk-message {
+  flex: 1;
+  padding: 10px 14px;
+  background-color: #d2dbf6;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cbsk-line {
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 5px;
+}
+
+.cbsk-line.short {
+  width: 60%;
+}
+
+.cbsk-line.medium {
+  width: 80%;
+}
+
+.cbsk-line:not(.short):not(.medium) {
+  width: 100%;
+}
+
+.cbsk-skeleton-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.cbsk-shimmer {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  z-index: 1;
+  pointer-events: none;
+}
